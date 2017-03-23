@@ -38,7 +38,9 @@ const theme = createTheme({
   primary: "linear-gradient(to left, #DC2424 , #4A569D );",
   secondary: "#1F2022",
   tertiary: "#fff",
-  quartenary: "#CECECE"
+  quartenary: "#CECECE",
+  quinary: "#DC2424",
+  senary: "#4A569D"
 }, {
   primary: "Avenir",
   secondary: "Railway"
@@ -56,7 +58,7 @@ export default class Presentation extends React.Component {
             Be a Better Citizen
           </Text>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
+        <Slide transition={["fade"]} bgColor="senary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>
           <Heading size={1} textColor="secondary">Heading 1</Heading>
           <Heading size={2} textColor="secondary">Heading 2</Heading>
