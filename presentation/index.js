@@ -13,6 +13,7 @@ import {
   Slide,
   Text,
   Appear,
+  Typeface,
 } from "spectacle";
 
 // Import image preloader util
@@ -39,8 +40,8 @@ const theme = createTheme({
   quinary: "#DC2424",
   senary: "#4A569D"
 }, {
-  primary: "Avenir",
-  secondary: "Railway"
+  primary: { name: "Lato", googleFont: true, styles: [ "400", "700i" ] },
+  secondary: { name: "Raleway", googleFont: true, styles: [ "400", "700i" ] }
 });
 
 export default class Presentation extends React.Component {
@@ -48,32 +49,38 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+          <Typeface googleFont="Raleway" weight={600}>
+            <Heading size={1} fit caps lineHeight={1} textColor="tertiary" textFont="secondary">
             Civis
-          </Heading>
-          <Appear>
-            <Text transition={["zoom"]}
-              margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-              Be a Better Citizen
-            </Text>
-          </Appear>
+            </Heading>
+          </Typeface>
+            <Appear>
+              <Text transition={["zoom"]}
+                margin="10px 0 0" textColor="tertiary" size={1} fit bold>
+                Be a Better Citizen
+              </Text>
+            </Appear>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
-          <Heading size={1} >The Problem:</Heading>
+          <Typeface googleFont="Raleway" weight={600}>
+            <Heading size={1} >THE PROBLEM</Heading>
+          </Typeface>
           <List>
             <Appear>
-              <ListItem>Poor Ui</ListItem>
+              <ListItem>Slow and Complicated Government Websites</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Too Much Noise</ListItem>
+              <ListItem>Information Overload</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Apathy</ListItem>
+              <ListItem>Busy Lives</ListItem>
             </Appear>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
-          <Heading size={1} >The Solution:</Heading>
+          <Typeface googleFont="Raleway" weight={600}>
+            <Heading size={1} >THE PROBLEM</Heading>
+          </Typeface>
           <BlockQuote>
             <Quote>
               A modern web application that makes it easy to stay informed and
@@ -81,8 +88,8 @@ export default class Presentation extends React.Component {
             </Quote>
           </BlockQuote>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
-          <Heading size={1}>FEATURES:</Heading>
+        <Slide transition={["fade"]} bgColor="tertiary" textColor="secondary">
+          <Heading size={1} textColor="secondary">FEATURES</Heading>
           <Heading size={5}>Address Form gif</Heading>
           <List>
             <Appear>
@@ -96,8 +103,8 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
-          <Heading size={1}>FEATURES:</Heading>
+        <Slide transition={["fade"]} bgColor="tertiary" textColor="secondary">
+          <Heading size={1} textColor="secondary">FEATURES</Heading>
           <Heading size={5}>Rep Index to Rep Page Gif</Heading>
           <List>
             <Appear>
@@ -111,8 +118,8 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
-          <Heading size={1}>FEATURES:</Heading>
+        <Slide transition={["fade"]} bgColor="tertiary" textColor="secondary">
+          <Heading size={1} textColor="secondary">FEATURES</Heading>
           <Heading size={5}>APIs</Heading>
           <List>
             <Appear>
@@ -132,8 +139,8 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
-          <Heading size={1}>FEATURES:</Heading>
+        <Slide transition={["fade"]} bgColor="tertiary" textColor="secondary">
+          <Heading size={1} textColor="secondary">FEATURES</Heading>
           <Heading size={5}>Native App gif in phone image</Heading>
           <List>
             <Appear>
