@@ -11,7 +11,8 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
+  Appear,
 } from "spectacle";
 
 // Import image preloader util
@@ -35,8 +36,8 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-  primary: "linear-gradient(to left, #DC2424 , #4A569D );",
-  secondary: "#1F2022",
+  primary: "linear-gradient(to left, #A43931, #1D4350 )",
+  secondary: "#1D4350", //blue
   tertiary: "#fff",
   quartenary: "#CECECE",
   quinary: "#DC2424",
@@ -54,33 +55,50 @@ export default class Presentation extends React.Component {
           <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
             Civis
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            Be a Better Citizen
-          </Text>
+          <Appear>
+            <Text transition={["zoom"]}
+              margin="10px 0 0" textColor="tertiary" size={1} fit bold>
+              Be a Better Citizen
+            </Text>
+        </Appear>
         </Slide>
-        <Slide transition={["fade"]} bgColor="senary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={1} >The Problem:</Heading>
           <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+            <Appear>
+              <ListItem>Poor Ui</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Too Much Noise</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Apathy</ListItem>
+            </Appear>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={1} >The Solution:</Heading>
           <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+            <Quote>
+              A modern web application that makes it easy to stay informed and
+              in touch with your representatives.
+            </Quote>
           </BlockQuote>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={1}>FEATURES:</Heading>
+          <Heading size={2}>Address Form gif</Heading>
+          <List>
+            <Appear>
+              <ListItem>Find your Represntatives in Database</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Search by Address or Zip Code</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Geolocation</ListItem>
+            </Appear>
+          </List>
         </Slide>
       </Deck>
     );
