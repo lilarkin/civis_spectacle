@@ -91,9 +91,9 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+        <Slide transition={["fade"]} bgColor="quartenary" textColor="tertiary">
           <Typeface googleFont="Raleway" weight={600}>
-            <Heading size={1} fit caps lineHeight={1} >SOLUTION</Heading>
+            <Heading size={1} fit caps lineHeight={1} textColor="#212121" >THE SOLUTION:</Heading>
           </Typeface>
           <BlockQuote>
             <Quote>
