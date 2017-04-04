@@ -28,6 +28,7 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
+  congress: require("../assets/congress.png"), 
 };
 
 preloader(images);
@@ -62,7 +63,7 @@ export default class Presentation extends React.Component {
               </Text>
             </Appear>
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
+        <Slide transition={["fade"]} bgImage={images.congress}>
           <Typeface googleFont="Raleway" weight={600}>
             <Heading textColor="quinary" size={1} >Why Civis?</Heading>
             <br />
@@ -75,9 +76,9 @@ export default class Presentation extends React.Component {
               <Text textColor="senary">For people who want to be politically active!</Text>
             </Appear>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+        <Slide transition={["fade"]}  textColor="senary" bgColor="tertiary">
           <Typeface googleFont="Raleway" weight={600}>
-            <Heading size={1} fit caps lineHeight={1}>THE PROBLEM</Heading>
+            <Heading textColor="senary" size={1} fit caps lineHeight={1}>THE PROBLEM</Heading>
           </Typeface>
           <List>
             <Appear>
