@@ -27,10 +27,6 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
 };
 
 preloader(images);
@@ -60,7 +56,7 @@ export default class Presentation extends React.Component {
               margin="10px 0 0" textColor="tertiary" size={1} fit bold>
               Be a Better Citizen
             </Text>
-        </Appear>
+          </Appear>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Heading size={1} >The Problem:</Heading>
@@ -87,7 +83,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Heading size={1}>FEATURES:</Heading>
-          <Heading size={2}>Address Form gif</Heading>
+          <Heading size={5}>Address Form gif</Heading>
           <List>
             <Appear>
               <ListItem>Find your Represntatives in Database</ListItem>
@@ -99,6 +95,87 @@ export default class Presentation extends React.Component {
               <ListItem>Geolocation</ListItem>
             </Appear>
           </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={1}>FEATURES:</Heading>
+          <Heading size={5}>Rep Index to Rep Page Gif</Heading>
+          <List>
+            <Appear>
+              <ListItem>News Alerts</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>General Information</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Articles</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={1}>FEATURES:</Heading>
+          <Heading size={5}>APIs</Heading>
+          <List>
+            <Appear>
+              <ListItem>NYT</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>ProPublica</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Google Maps / Civic Information</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Wikipedia</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Twitter</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={1}>FEATURES:</Heading>
+          <Heading size={5}>Native App gif in phone image</Heading>
+          <List>
+            <Appear>
+              <ListItem>Native Capability for iOS and Android</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={1}>Roadblocks</Heading>
+          <List>
+            <Appear>
+              <ListItem>Article Search</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Representatives</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>APIs</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={1}>Roadmap</Heading>
+          <List>
+            <Appear>
+              <ListItem>Local Representatives</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Better ways to contact: twitter, email form</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Automated Alerts: mailers</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={1}>Techstack</Heading>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+            Civis
+          </Heading>
         </Slide>
       </Deck>
     );
