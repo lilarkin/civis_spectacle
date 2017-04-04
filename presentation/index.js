@@ -36,9 +36,10 @@ const theme = createTheme({
   primary: "linear-gradient(to left, #A43931, #1D4350 )",
   secondary: "#1D4350", //blue
   tertiary: "#fff",
-  quartenary: "#CECECE",
-  quinary: "#DC2424",
-  senary: "#4A569D"
+  quartenary: "#757575",// grey
+  quinary: "#A43931", //red
+  senary: "000000"
+
 }, {
   primary: { name: "Lato", googleFont: true, styles: [ "400", "700i" ] },
   secondary: { name: "Raleway", googleFont: true, styles: [ "400", "700i" ] }
@@ -57,13 +58,26 @@ export default class Presentation extends React.Component {
             <Appear>
               <Text transition={["zoom"]}
                 margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-                Be a Better Citizen
+                Democracy Depends on You!
               </Text>
+            </Appear>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Typeface googleFont="Raleway" weight={600}>
+            <Heading textColor="quinary" size={1} >Why Civis?</Heading>
+            <br />
+          </Typeface>
+            <Appear>
+              <Text textColor="senary">Civis makes it easy to stay informed and in touch with your legislators.
+              </Text>
+            </Appear>
+            <Appear>
+              <Text textColor="senary">For people who want to be politically active!</Text>
             </Appear>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Typeface googleFont="Raleway" weight={600}>
-            <Heading size={1} >THE PROBLEM</Heading>
+            <Heading size={1} fit caps lineHeight={1}>THE PROBLEM</Heading>
           </Typeface>
           <List>
             <Appear>
@@ -79,7 +93,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Typeface googleFont="Raleway" weight={600}>
-            <Heading size={1} >THE PROBLEM</Heading>
+            <Heading size={1} fit caps lineHeight={1} >SOLUTION</Heading>
           </Typeface>
           <BlockQuote>
             <Quote>
