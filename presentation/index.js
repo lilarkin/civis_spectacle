@@ -30,27 +30,27 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  congress: require("../assets/congress.png"), 
-  hands: require("../assets/hands.jpg"), 
-  lightbulb: require("../assets/lightbulb.jpg"), 
-  road: require("../assets/road.jpg"), 
-  propublica: require("../assets/propublica.png"), 
-  nyt: require("../assets/nyt-t-logo.png"), 
-  googlemap: require("../assets/googlemap.png"), 
-  wikipedia: require("../assets/wikipedia.png"), 
-  twitter: require("../assets/twitter.png"), 
-  rails: require("../assets/rails.png"), 
-  ruby: require("../assets/ruby.png"), 
-  fontawesome: require("../assets/fontawesome.png"), 
-  github: require("../assets/github.png"), 
-  js: require("../assets/js.png"), 
-  materialize: require("../assets/materialize.png"), 
-  react: require("../assets/react.png"), 
-  redux: require("../assets/redux.png"), 
-  heroku: require("../assets/heroku.png"), 
-  addressForm: require("../assets/addressForm.gif"), 
-  civisNative: require("../assets/civisNative.gif"), 
-  rep: require("../assets/rep.gif"), 
+  congress: require("../assets/congress.png"),
+  hands: require("../assets/hands.jpg"),
+  lightbulb: require("../assets/lightbulb.jpg"),
+  road: require("../assets/road.jpg"),
+  propublica: require("../assets/propublica.png"),
+  nyt: require("../assets/nyt-t-logo.png"),
+  googlemap: require("../assets/googlemap.png"),
+  wikipedia: require("../assets/wikipedia.png"),
+  twitter: require("../assets/twitter.png"),
+  rails: require("../assets/rails.png"),
+  ruby: require("../assets/ruby.png"),
+  fontawesome: require("../assets/fontawesome.png"),
+  github: require("../assets/github.png"),
+  js: require("../assets/js.png"),
+  materialize: require("../assets/materialize.png"),
+  react: require("../assets/react.png"),
+  redux: require("../assets/redux.png"),
+  heroku: require("../assets/heroku.png"),
+  addressForm: require("../assets/addressForm.gif"),
+  civisNative: require("../assets/civisNative.gif"),
+  rep: require("../assets/rep.gif"),
 };
 
 preloader(images);
@@ -149,7 +149,7 @@ export default class Presentation extends React.Component {
             <Heading size={2} textColor="secondary" align="flex-start flex-start" textAlign="left">FEATURES
             <br />
             <Heading size={5} textColor='quinary'>
-              Available for Native 
+              Available for Native
             </Heading>
             <Heading size={5} textColor='quinary'>
               iOS and Android
@@ -205,10 +205,10 @@ export default class Presentation extends React.Component {
               <ListItem>Article Search</ListItem>
             </Appear>
             <Appear>
-              <ListItem>DatabaseStructure</ListItem>
+              <ListItem>Database Structure</ListItem>
             </Appear>
             <Appear>
-              <ListItem>APIs</ListItem>
+              <ListItem>Integrating APIs</ListItem>
             </Appear>
           </List>
         </Slide>
@@ -216,13 +216,13 @@ export default class Presentation extends React.Component {
           <Heading size={1}>Moving Forward</Heading>
           <List>
             <Appear>
-              <ListItem>Local Representatives</ListItem>
+              <ListItem>Local Legislators</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Better ways to contact: twitter, email form</ListItem>
+              <ListItem>Improved Contact Methods</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Automated Alerts: mailers</ListItem>
+              <ListItem>Improved News Alerts</ListItem>
             </Appear>
           </List>
         </Slide>
@@ -235,4 +235,3 @@ export default class Presentation extends React.Component {
     );
   }
 }
-
