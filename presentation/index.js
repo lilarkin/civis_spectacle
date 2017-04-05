@@ -122,8 +122,7 @@ export default class Presentation extends React.Component {
           <BlockQuote>
             <Quote>
               <Heading size={4} textColor='white'>
-              A modern web application that makes it easy to stay informed and
-              in touch with your representatives.
+              A modern, user-friendly web application that keeps you informed and in touch with your legislators.
               </Heading>
             </Quote>
           </BlockQuote>
@@ -138,7 +137,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" textColor="secondary">
           <Heading size={1} textColor="secondary">FEATURES</Heading>
-          <Heading size={4} textColor='quinary'>Learn about your legislator:</Heading>
+          <Heading size={4} textColor='quinary'>Learn about your legislators:</Heading>
           <br />
           <Heading>
              <Image src={images.rep} style={{ border: 'black solid 3px'}}/>
@@ -227,9 +226,11 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
-            Civis
-          </Heading>
+          <Typeface googleFont="Raleway" weight={600}>
+            <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
+              Civis
+            </Heading>
+          </Typeface>
         </Slide>
       </Deck>
     );
