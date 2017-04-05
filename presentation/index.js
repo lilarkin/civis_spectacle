@@ -51,6 +51,7 @@ const images = {
   addressForm: require("../assets/addressForm.gif"),
   civisNative: require("../assets/civisNative.gif"),
   rep: require("../assets/rep.gif"),
+  prompic: require("../assets/prompic.jpg"),
 };
 
 preloader(images);
@@ -225,12 +226,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Typeface googleFont="Raleway" weight={600}>
-            <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
-              Civis
-            </Heading>
-          </Typeface>
+        <Slide transition={["zoom"]} bgImage={images.prompic}>
         </Slide>
       </Deck>
     );
