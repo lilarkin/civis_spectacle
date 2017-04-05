@@ -16,6 +16,7 @@ import {
   Typeface,
   Layout,
   Image,
+  Fill,
 } from "spectacle";
 
 // Import image preloader util
@@ -100,9 +101,9 @@ export default class Presentation extends React.Component {
               <Heading size={5} textColor="senary">For people who want to be politically active!</Heading>
             </Appear>
         </Slide>
-        <Slide transition={["slide"]}  textColor="senary" bgColor="quartenary">
+        <Slide transition={["slide"]}  textColor="senary" bgColor="#424242">
           <Typeface googleFont="Raleway" weight={600}>
-            <Heading textColor="black"  size={1} fit caps lineHeight={1}>THE PROBLEM</Heading>
+            <Heading textColor="#9e9e9e"  size={1} fit caps lineHeight={1}>THE PROBLEM</Heading>
           </Typeface>
           <List textColor='white'>
             <Appear>
@@ -162,27 +163,38 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="tertiary" textColor="secondary">
           <Heading size={3} textColor="secondary">FEATURES</Heading>
           <Heading size={6}>APIs</Heading>
-          <List textAlign='center'>
-            <Appear>
-              <Image src={images.propublica} height="60px" style={{margin: "10px"}} />
-            </Appear>
-            <br />
-            <Appear>
-              <Image src={images.nyt} height="60px" style={{margin: "10px"}} />
-            </Appear>
-            <br />
-            <Appear>
-              <Image src={images.googlemap} height="60px" style={{margin: "10px"}} />
-            </Appear>
-            <br />
-            <Appear>
-              <Image src={images.wikipedia} height="60px" style={{margin: "10px"}} />
-            </Appear>
-            <br />
-            <Appear>
-              <Image src={images.twitter} height="60px" style={{margin: "10px"}} />
-            </Appear>
-          </List>
+            <List textAlign='center'>
+              <Layout>
+                <Fill>
+                <Appear>
+                  <Image src={images.propublica} height="100px" style={{margin: "10px"}}  />
+                </Appear>
+                </Fill>
+                <Fill>
+                <Appear>
+                  <Image src={images.nyt} height="100px" style={{margin: "10px"}}  />
+                </Appear>
+                </Fill>
+                <Fill>
+                <Appear>
+                  
+                  <Image src={images.googlemap} height="100px" style={{margin: "10px"}}  />
+                </Appear>
+                </Fill>
+              </Layout>
+              <Layout>
+                <Fill>
+                <Appear>
+                  <Image src={images.wikipedia} height="100px" />
+                </Appear>
+                </Fill>
+                <Fill>
+                <Appear>
+                  <Image src={images.twitter} height="100px"  />
+                </Appear>
+                </Fill>
+              </Layout>
+            </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="quartenary" textColor="tertiary">
             <Image src={images.ruby} height="100px" style={{margin: "10px"}} />
