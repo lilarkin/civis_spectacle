@@ -15,6 +15,7 @@ import {
   Appear,
   Typeface,
   Layout,
+  Image,
 } from "spectacle";
 
 // Import image preloader util
@@ -33,6 +34,23 @@ const images = {
   hands: require("../assets/hands.jpg"), 
   lightbulb: require("../assets/lightbulb.jpg"), 
   road: require("../assets/road.jpg"), 
+  propublica: require("../assets/propublica.png"), 
+  nyt: require("../assets/nyt-t-logo.png"), 
+  googlemap: require("../assets/googlemap.png"), 
+  wikipedia: require("../assets/wikipedia.png"), 
+  twitter: require("../assets/twitter.png"), 
+  rails: require("../assets/rails.png"), 
+  ruby: require("../assets/ruby.png"), 
+  fontawesome: require("../assets/fontawesome.png"), 
+  github: require("../assets/github.png"), 
+  js: require("../assets/js.png"), 
+  materialize: require("../assets/materialize.png"), 
+  react: require("../assets/react.png"), 
+  redux: require("../assets/redux.png"), 
+  heroku: require("../assets/heroku.png"), 
+  addressForm: require("../assets/addressForm.gif"), 
+  civisNative: require("../assets/civisNative.gif"), 
+  rep: require("../assets/rep.gif"), 
 };
 
 preloader(images);
@@ -97,7 +115,7 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
-        <Slide transition={["spin"]} bgImage={images.hands} bgDarken={0.75}>
+        <Slide transition={["spin"]} bgImage={images.hands} bgDarken={0.65}>
           <Typeface googleFont="Raleway" weight={600}>
             <Heading size={1} fit caps lineHeight={1} textColor="#039be5" >THE SOLUTION:</Heading>
           </Typeface>
@@ -112,66 +130,73 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["zoom"]} bgColor="tertiary" textColor="secondary">
           <Heading size={1} textColor="secondary">FEATURES</Heading>
-          <Heading size={5}>Address Form gif</Heading>
-          <List>
-            <Appear>
-              <ListItem>Find your Represntatives in Database</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Search by Address or Zip Code</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Geolocation</ListItem>
-            </Appear>
-          </List>
+          <Heading size={4} textColor='quinary'>Find your legislators:</Heading>
+          <br />
+          <Heading>
+             <Image src={images.addressForm} style={{ border: 'black solid 3px'}}/>
+          </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" textColor="secondary">
           <Heading size={1} textColor="secondary">FEATURES</Heading>
-          <Heading size={5}>Rep Index to Rep Page Gif</Heading>
-          <List>
-            <Appear>
-              <ListItem>News Alerts</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>General Information</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Articles</ListItem>
-            </Appear>
-          </List>
+          <Heading size={4} textColor='quinary'>Learn about your legislator:</Heading>
+          <br />
+          <Heading>
+             <Image src={images.rep} style={{ border: 'black solid 3px'}}/>
+          </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" textColor="secondary">
-          <Heading size={1} textColor="secondary">FEATURES</Heading>
-          <Heading size={5}>Native App gif in phone image</Heading>
-          <List>
-            <Appear>
-              <ListItem>Native Capability for iOS and Android</ListItem>
-            </Appear>
-          </List>
+          <Layout>
+            <Heading size={2} textColor="secondary" align="flex-start flex-start" textAlign="left">FEATURES
+            <br />
+            <Heading size={5} textColor='quinary'>
+              Available for Native 
+            </Heading>
+            <Heading size={5} textColor='quinary'>
+              iOS and Android
+            </Heading>
+            </Heading>
+            <br />
+            <Image src={images.civisNative} style={{ border: 'black solid 3px'}} textAlign="right" height="600px"/>
+          </Layout>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" textColor="secondary">
-          <Heading size={1} textColor="secondary">FEATURES</Heading>
-          <Heading size={5}>APIs</Heading>
-          <List>
+          <Heading size={3} textColor="secondary">FEATURES</Heading>
+          <Heading size={6}>APIs</Heading>
+          <List textAlign='center'>
             <Appear>
-              <ListItem>NYT</ListItem>
+              <Image src={images.propublica} height="60px" style={{margin: "10px"}} />
             </Appear>
+            <br />
             <Appear>
-              <ListItem>ProPublica</ListItem>
+              <Image src={images.nyt} height="60px" style={{margin: "10px"}} />
             </Appear>
+            <br />
             <Appear>
-              <ListItem>Google Maps / Civic Information</ListItem>
+              <Image src={images.googlemap} height="60px" style={{margin: "10px"}} />
             </Appear>
+            <br />
             <Appear>
-              <ListItem>Wikipedia</ListItem>
+              <Image src={images.wikipedia} height="60px" style={{margin: "10px"}} />
             </Appear>
+            <br />
             <Appear>
-              <ListItem>Twitter</ListItem>
+              <Image src={images.twitter} height="60px" style={{margin: "10px"}} />
             </Appear>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
-          <Heading size={1}>Techstack</Heading>
+        <Slide transition={["fade"]} bgColor="quartenary" textColor="tertiary">
+            <Image src={images.ruby} height="100px" style={{margin: "10px"}} />
+            <Image src={images.react} height="100px" style={{margin: "10px"}} />
+            <Image src={images.redux} height="100px" style={{margin: "10px"}} />
+            <Image src={images.js} height="100px" style={{margin: "10px"}} />
+            <Heading size={2} caps fit textColor="white" textFont="primary" style={{padding: "10px"}}>
+              Technology Stack
+            </Heading>
+            <Image src={images.rails} height="100px" style={{margin: "10px"}}/>
+            <Image src={images.github} height="100px" style={{margin: "10px"}}/>
+            <Image src={images.heroku} height="100px" style={{margin: "10px"}}/>
+            <Image src={images.materialize} height="100px" style={{margin: "10px"}}/>
+            <Image src={images.fontawesome} height="100px" style={{margin: "10px"}}/>
         </Slide>
         <Slide transition={["fade"]} bgImage={images.lightbulb} bgDarken={0.75} textColor="tertiary">
           <Heading size={1} style={{marginTop: "0px"}}>Learning Process</Heading>
@@ -180,7 +205,7 @@ export default class Presentation extends React.Component {
               <ListItem>Article Search</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Representatives</ListItem>
+              <ListItem>DatabaseStructure</ListItem>
             </Appear>
             <Appear>
               <ListItem>APIs</ListItem>
@@ -201,7 +226,6 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
-        
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
             Civis
@@ -212,131 +236,3 @@ export default class Presentation extends React.Component {
   }
 }
 
-
-
-      /*<Spectacle theme={theme}>
-        <Deck transition={["zoom", "slide"]} transitionDuration={500}>
-        
-
-
-
-          <Slide transition={["slide"]} bgColor="white">
-            <Layout>
-              <Heading textColor="secondary" textFont="primary" textAlign="left" >
-                FEATURES:
-                <Heading size={2} textColor="primary" textFont="primary" align="flex-start flex-start" textAlign="left">
-                  Map View
-                  <List textColor="secondary" style={{lineHeight: '1.5', marginTop: '30px', marginRight: "20px", listStylePosition: "outside", paddingLeft: "40px"}}>
-                    <Appear><ListItem>Google Maps JS API</ListItem></Appear>
-                    <Appear><ListItem>Custom SVG Markers</ListItem></Appear>
-                    <Appear><ListItem>Event Preview Info Windows</ListItem></Appear>
-                  </List>
-                </Heading>
-              </Heading>
-              <Image src={images.mapview} height="600px" margin="20px"/>
-            </Layout>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="white">
-            <Layout>
-              <Heading textColor="primary" textFont="primary" textAlign="left" >
-                FEATURES:
-                <Heading size={2} textColor="secondary" textFont="primary" align='flex-start flex-start' textAlign="left">
-                  List View
-                  <List textColor="primary" style={{lineHeight: '1.5', marginTop: '30px', marginRight: "20px", listStylePosition: "outside", paddingLeft: "40px"}}>
-                    <Appear><ListItem>Instant Toggle List/Map</ListItem></Appear>
-                    <Appear><ListItem>Structured View</ListItem></Appear>
-                    <Appear><ListItem>Sorted By Time</ListItem></Appear>
-                  </List>
-                </Heading>
-              </Heading>
-              <Image src={images.listview} height="600px" style={{marginLeft: "120px"}}/>
-            </Layout>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="white">
-            <Layout>
-              <Heading textColor="secondary" textFont="primary" textAlign="left" >
-                FEATURES:
-                <Heading size={2} textColor="primary" textFont="primary" align='flex-start flex-start' textAlign="left">
-                  Detail View
-                  <List textColor="secondary" style={{lineHeight: '1.5', marginTop: '30px', marginRight: "20px", listStylePosition: "outside", paddingLeft: "40px"}}>
-                    <Appear><ListItem>All Event Information</ListItem></Appear>
-                    <Appear><ListItem>Get Directions</ListItem></Appear>
-                  </List>
-                </Heading>
-              </Heading>
-              <Image src={images.detailview} height="600px" style={{marginLeft: "120px"}}/>
-            </Layout>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="white">
-            <Layout>
-              <Heading textColor="primary" textFont="primary" textAlign="left" >
-                FEATURES:
-                <Heading size={2} textColor="secondary" textFont="primary" align='flex-start flex-start' textAlign="left">
-                  Filter
-                  <List textColor="primary" style={{lineHeight: '1.5', marginTop: '30px', marginRight: "20px", listStylePosition: "outside", paddingLeft: "40px"}}>
-                    <Appear><ListItem>Filter By Date</ListItem></Appear>
-                    <Appear><ListItem>Filter By Category</ListItem></Appear>
-                  </List>
-                </Heading>
-              </Heading>
-              <Image src={images.filter} height="600px" style={{marginLeft: "120px"}}/>
-            </Layout>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="white">
-            <Layout>
-              <Heading textColor="secondary" textFont="primary" textAlign="left" >
-                FEATURES:
-                <Heading size={2} textColor="primary" textFont="primary" align='flex-start flex-start' textAlign="left">
-                  Add Event
-                  <List textColor="secondary" style={{lineHeight: '1.5', marginTop: '30px', marginRight: "20px", listStylePosition: "outside", paddingLeft: "40px"}}>
-                    <Appear><ListItem>Address Geocoded</ListItem></Appear>
-                    <Appear><ListItem>Date + Time = Unix Timestamp</ListItem></Appear>
-                  </List>
-                </Heading>
-              </Heading>
-              <Image src={images.addEvent} height="600px" style={{marginLeft: "120px"}}/>
-            </Layout>
-          </Slide>
-          <Slide transition={["slide"]} bgImage={images.roadblock} bgDarken={0.75}>
-            <Heading size={1} caps fit textColor="primary" textFont="primary">
-              Roadblocks
-            </Heading>
-            <List textColor="white">
-              <Appear><ListItem>Broken Google Maps API Packages. Un-Stateful!</ListItem></Appear>
-              <Appear><ListItem>Markers At Same Location, Clustering</ListItem></Appear>
-            </List>
-          </Slide>
-          <Slide transition={["slide"]} bgImage={images.road} bgDarken={0.75}>
-            <Heading size={2} caps fit textColor="white">
-              Roadmap
-            </Heading>
-            <List textColor="white">
-              <Appear><ListItem>Adding Events To Calendars</ListItem></Appear>
-              <Appear><ListItem>Search Function</ListItem></Appear>
-              <Appear><ListItem>Admin Backend</ListItem></Appear>
-              <Appear><ListItem>Upvoting, Tags, & Comments</ListItem></Appear>
-            </List>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="primary">
-            <Image src={images.js} height="170px" style={{margin: "10px"}} />
-            <Image src={images.github} height="170px" style={{margin: "10px"}} />
-            <Image src={images.googlemap} height="170px" style={{margin: "10px"}} />
-            <Image src={images.heroku} height="170px" style={{margin: "10px"}} />
-            <Image src={images.materialize} height="170px" style={{margin: "10px"}} />
-            <Heading size={2} caps fit textColor="white" textFont="primary" style={{padding: "10px"}}>
-              Technology Stack
-            </Heading>
-            <Image src={images.momentjs} height="170px" style={{margin: "10px"}}/>
-            <Image src={images.mongodb} height="170px" style={{margin: "10px"}}/>
-            <Image src={images.nodejs} height="170px" style={{margin: "10px"}}/>
-            <Image src={images.react} height="170px" style={{margin: "10px"}}/>
-            <Image src={images.redux} height="170px" style={{margin: "10px"}}/>
-          </Slide>
-          <Slide transition={["zoom"]} bgColor="secondary">
-            <Image src={images.thehaps} height="293px"/>
-            <Heading size={1} fit textColor="#40c4ff">
-              http://thehapsmap.com
-            </Heading>
-          </Slide>
-        </Deck>
-      </Spectacle>*/
